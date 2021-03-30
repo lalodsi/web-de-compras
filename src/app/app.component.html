@@ -1,0 +1,44 @@
+<div id="Lista">
+  <header id="Encabezado">
+    <h1>{{Title}}</h1>
+    <p>Ingresa tu código de descuento</p>
+    <input type="text" [(ngModel)]="Elemento" >
+    <div *ngIf="Elemento === '' else valorIngresado">
+      <p>Ingresa un valor</p>
+    </div>
+    <ng-template #valorIngresado>
+      <div>
+        <p>Acabas de ingresar {{Elemento}}</p>
+      </div>
+    </ng-template>
+
+  </header>
+
+
+  <!--<button (click)="addItems()">Add items</button>-->
+
+  <!--
+  <ul id="eachElement">
+    <li *ngIf="items.length == 0">La lista esta vacía</li>
+    <li *ngFor="let object of items; index as i">
+      {{i + 1}}. {{ object }}  
+      <button (click)="deleteItem(i)">Delete</button>
+    </li>
+  </ul>-->
+
+  <section id="eachElement">
+    <div *ngFor="let product of products">
+      <p>{{product.title}}</p>
+      <img [src]="product.image" >
+      <p>{{product.price}}</p>
+    </div>
+  </section>
+
+
+  <div id="descuento" [ngSwitch]="Elemento">
+    <p *ngSwitchCase="'descuento'">Acabas de recibir un descuento de 20% en tu compra</p>
+    <p *ngSwitchCase="'superdescuento'">Felicidades! Acabas de recibir un descuento de 40% en tu compra</p>
+    <p *ngSwitchCase="'notengovaro'">Felicidades! Te lo llevas todo gratis!</p>
+    <p *ngSwitchDefault></p>
+  </div>
+</div>

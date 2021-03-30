@@ -1,0 +1,49 @@
+#Lista {
+	text-align: center;
+	background-color: #C14F00; 
+	width: auto;
+	font-size: 20px;
+	height: 100%;
+}
+#lista ul{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+}
+#eachElement{
+	padding: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+#eachElement div{
+	background-color: #CF4F00;
+	border: 8px solid black;
+	margin: 10px;
+	width: 150px;
+	height: auto;
+	color: white;
+}
+#eachElement #footElement{
+	
+	background-color: #FF5342; 
+	margin: none;
+}
+img{
+	width: 150px;
+	height: 150px;
+}
+#indice{
+	font-size: 16px;
+
+}
+#Encabezado{
+	padding: 10px;
+	align-content: center;
+	background-color: #FFCE42;
+}
+#descuento{
+	background-color: white;
+	color: black;
+}
